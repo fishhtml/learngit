@@ -20,3 +20,8 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
  5. 查看命令历史。`git reflog`
 ##工作区和暂存区
 ![ ](/home/loo/桌面/learngit/headandrepository.jpeg  "git原理")
+
+**分解原理：**
+
+![ ](/home/loo/桌面/learngit/headandrepository1.jpeg  "git add")
+![ ](/home/loo/桌面/learngit/headandrepository2.jpeg  "git commit")
