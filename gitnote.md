@@ -4,7 +4,7 @@
  1. 新建一个空的。`git int`
  2. 将修改后的文件加到工作区(work tree)。`git add <file>`
  3. 查看当前仓库状态。`git status`
- 4. 查看修改的内容。`git diff`
+ 4. 查看修改的内容。（工作区与版本库之间的区别）`git diff`
  5. 提交和并。`git commit -m "some notes"`
 ##版本退回
  1. 查看修改记录。`git log`
@@ -25,3 +25,4 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 
 ![ ](/home/loo/桌面/learngit/headandrepository1.jpeg  "git add")
 ![ ](/home/loo/桌面/learngit/headandrepository2.jpeg  "git commit")
+查看工作区与版本库修改内容`git diff -- HEAD <filename>`
