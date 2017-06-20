@@ -47,7 +47,7 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 (可以使用`git checkout -- <filename>`取消误删除)
 3. 同步删除状态到repository`git commit -m "commition"`
 
-##远程仓储
+## 远程仓储
 
 1. 创建SSH Key,`$ ssh-keygen -t rsa -C "youremail@example.com"`//注意pwd目录位置
 
@@ -64,10 +64,12 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 3. 如图
 
 
-![git remote](remote.jpeg  "git remote")
+![git remote](gitremote.jpeg  "git remote")
 
 
-`加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。`
+```
+加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+```
 
 4. 修改本地后，推送上去
 
