@@ -3,6 +3,10 @@
  > http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
  > 这个教程比较简洁:http://www.bootcss.com/p/git-guide/
  > git官方教程：https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6
+
+## 速查图
+![速查图](gitmap.jpg "速查图")
+
 ## 入门第一步
 
  1. 新建一个空的。`git int`
@@ -183,5 +187,34 @@ If you are sure you want to delete it, run 'git branch -D feature-vulcan'.
 
 7. `git branch -D feature-vulcan` 强行删除
 
-## 
+## 多人协作
+ > 当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin
 
+### 查看相关
+
+查看远程仓储的信息：`git remote`
+查看更多详情：`git remote -v`
+查看超多信息：`git remote show <remotename=origin>`
+
+### 推送分支
+
+推送到远程仓储：`git push [remote-name] [branch-name]`例如，`git push origin master`/`git push origin dev`//remote-name是远程服务器名称，不一定是master，其他也可
+
+### 抓取分支
+
+1. clone repo :`git clone git@github.com:fishhtml/learngit.git`//这里仅仅之clone了master分支，没有其他分支
+2. `git checkout --track origin/dev`跟踪远程分支，也就是把远程分支dev分支下载到了本地
+```
+这里还有其他方法：https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF
+```
+
+### 案例
+
+> A同学同步分支dev到了github，B也修改了dev分支下相同的文件，B在推送的时候会提示无法推送。这时，需要同步A同学的push，处理A/B的差异，让后B同学再提交push就可以了
+
+*差异处理：* （B同学完成）
+1. `git fetch origin dev`从origin拉取dev分支中的差异
+2. `git merge`合并所有差异，前面学过哈
+3. 1,2两步相当于 `git pull`
+4. 如果B同学的本地有自己新建的dev分支，提交`git pull`时，本地的dev（可能不叫dev）与远端的origin/dev无法对应起来，这时，需要设置分支链接关系：`git branch --set-upstream dev origin/dev`
+5. 打开文件解决差异后，push上去。
