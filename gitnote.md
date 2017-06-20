@@ -1,10 +1,8 @@
 # git学习笔记
 
- >  http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
-
- > 这个教程比较简洁
- > http://www.bootcss.com/p/git-guide/
-
+ > http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+ > 这个教程比较简洁:http://www.bootcss.com/p/git-guide/
+ > git官方教程：https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6
 ## 入门第一步
 
  1. 新建一个空的。`git int`
