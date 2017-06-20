@@ -93,3 +93,45 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 5. 合并某分支到当前分支。`git merge <branchname>`
 6. 删除分支。`git branch -d <branchname>`
 
+### 管理冲突
+
+*冲突的出现×：*
+1. 在分支上修改readme文件后`add+commit`，
+2. 然后`checkout`回`master`，
+3. 修改readme文件，`add+commit`,
+![提交不同内容后](gitconflict.png "提交不同内容后")
+4. 再`merge`分支到`master`时，
+5. 出现`conflict`。
+
+```
+自动合并 readme
+冲突（内容）：合并冲突于 readme
+自动合并失败，修正冲突然后提交修正的结果。
+
+```
+
+*冲突的解决*
+1. `cat readme`或`less readme`查看冲突内容。下面标记出了分支的区别：
+
+```
+快速复习笔记。
+每日必看。
+<<<<<<< HEAD
+insert new feature1
+=======
+insert feature1 
+>>>>>>> feature1
+
+```
+
+2. 打开readme文件修改，readme内容此时如上：
+
+3. `add+commit`
+4. 解决
+![conflict解决了](gitconflict1.png "conflict解决了")
+
+```
+`git log --graph --pretty=oneline --abbrev-commit`和`git log -graph` 以命令行的形式查看图形log
+```
+
+
