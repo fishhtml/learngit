@@ -95,7 +95,7 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 
 ### 管理冲突
 
-*冲突的出现×：*
+*冲突的出现：*
 1. 在分支上修改readme文件后`add+commit`，
 2. 然后`checkout`回`master`，
 3. 修改readme文件，`add+commit`,
@@ -166,4 +166,24 @@ stash@{0}: WIP on dev: 6224937 add merge
 > `git stash apply`恢复后，stash内容并不删除
 > `git stash drop`恢复后才能用,使用这条可以使stash内容被删除
 > `gti stash pop`恢复的同时把stash内容也删了（上面俩者的合集）
+
+## Feature分支
+
+> 添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。
+
+1.`git checkout -b feature-vulcan`
+2. `git add vulcan.py`
+3. `git commit -m "add feature vulcan"`
+4. `git checkout dev`
+5. 就在此时，接到上级命令，因经费不足，新功能必须取消！
+6. `git branch -d feature-vulcan`，却提示：
+
+```
+error: The branch 'feature-vulcan' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D feature-vulcan'.
+```
+
+7. `git branch -D feature-vulcan` 强行删除
+
+## 
 
