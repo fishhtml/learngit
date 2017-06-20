@@ -134,4 +134,36 @@ insert feature1
 `git log --graph --pretty=oneline --abbrev-commit`和`git log -graph` 以命令行的形式查看图形log
 ```
 
+### 分支管理策略
+
+`merge`时，使用`--no-f`参数，即：`git merge --no-ff -m "这里可以写merge时的评论" dev`（如果不用这个参数，是无法加入评论的，在`git log`看不出曾今做过合并）
+
+## Bug分支
+
+*使用场景：*
+1. 你正在分支dev上编写软件
+2. 突然master分支上出现bug需要修复
+3. Bug分支派上用场：使用`git stash`来保存当前的修改状态（work tree当前的状态）
+
+*使用方法：*
+1. `git stash`保存当前的修改状态，以便之后恢复
+2. `git checkout master`回主分支
+3. `git checkout -b issue-101`创建并切换到bug分支
+4. 修复bug后，`git add issue-101`,`git commit -m "issue-101 fixed"`，提交修改到issue-101分支
+5. `git checkout master`切换到主分支
+6. `git merge --no-ff -m "issue-101 has fixed" issue-101`把修改的内容合并到主分支
+7. `git branch -d issue-101`删除bug分支issue-101
+8. `git checkout dev`切回到dev分支
+9. `git stash list`显示所有保存的stash状态
+
+```
+$ git stash list
+stash@{0}: WIP on dev: 6224937 add merge
+```
+
+10. `git stash apply stash@{0}`还原先前的work tree的状态
+
+> `git stash apply`恢复后，stash内容并不删除
+> `git stash drop`恢复后才能用,使用这条可以使stash内容被删除
+> `gti stash pop`恢复的同时把stash内容也删了（上面俩者的合集）
 
