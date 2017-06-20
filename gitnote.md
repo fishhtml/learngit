@@ -2,6 +2,9 @@
 
  >  http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
+ > 这个教程比较简洁
+ > http://www.bootcss.com/p/git-guide/
+
 ## 入门第一步
 
  1. 新建一个空的。`git int`
@@ -52,7 +55,9 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 1. 创建SSH Key,`$ ssh-keygen -t rsa -C "youremail@example.com"`//注意pwd目录位置
 
 
-`成功在主目录下创建.ssh/id_rsa和.ssh/id_rs.pub . 前者是私钥，后者是公钥`
+```
+成功在主目录下创建.ssh/id_rsa和.ssh/id_rs.pub . 前者是私钥，后者是公钥
+```
 
 
 2. 在github生保存公钥
@@ -64,7 +69,7 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 3. 如图
 
 
-![git remote](gitremote.jpeg  "git remote")
+![git remote](gitremote.png  "git remote")
 
 
 ```
@@ -78,4 +83,13 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 
 
 5. clone远程仓储到本地`git clone git@github.com:nswbmw/N-blog.git`
+
+## 分支管理
+
+1. 查看分支。`git branch`
+2. 创建分支。`git branch <branchname>`
+3. 切换分支。`git checkout <branchname>`
+4. 创建+切换分支。`git checkou -b <branchname>`
+5. 合并某分支到当前分支。`git merge <branchname>`
+6. 删除分支。`git branch -d <branchname>`
 
