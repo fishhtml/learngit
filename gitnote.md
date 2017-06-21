@@ -5,7 +5,7 @@
  > git官方教程：https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6
 
 ## 速查图
-![速查图](gitmap.jpg "速查图")
+![速查图](src/gitmap.jpg "速查图")
 
 ## 入门第一步
 
@@ -31,12 +31,12 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 
 ## 工作区和暂存区
 
-![git原理](headandrepository.jpeg  "git原理")
+![git原理](src/headandrepository.jpeg  "git原理")
 
 **分解原理：**
 
-![git add](headandrepository1.jpeg  "git add")
-![git commit](headandrepository2.jpeg  "git commit")
+![git add](src/headandrepository1.jpeg  "git add")
+![git commit](src/headandrepository2.jpeg  "git commit")
 
 查看工作区与版本库修改内容`git diff -- HEAD <filename>`
 
@@ -71,7 +71,7 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 3. 如图
 
 
-![git remote](gitremote.png  "git remote")
+![git remote](src/gitremote.png  "git remote")
 
 
 ```
@@ -101,7 +101,7 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 1. 在分支上修改readme文件后`add+commit`，
 2. 然后`checkout`回`master`，
 3. 修改readme文件，`add+commit`,
-![提交不同内容后](gitconflict.png "提交不同内容后")
+![提交不同内容后](src/gitconflict.png "提交不同内容后")
 4. 再`merge`分支到`master`时，
 5. 出现`conflict`。
 
@@ -130,7 +130,7 @@ insert feature1
 
 3. `add+commit`
 4. 解决
-![conflict解决了](gitconflict1.png "conflict解决了")
+![conflict解决了](src/gitconflict1.png "conflict解决了")
 
 ```
 `git log --graph --pretty=oneline --abbrev-commit`和`git log -graph` 以命令行的形式查看图形log
