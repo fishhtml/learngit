@@ -48,7 +48,7 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 ## 删除文件
 
 1. 删除工作区文件 `rm <filename>`
-2. 同步删除状态到stage`git rm <filename>`
+2. 同步删除状态到stage`git rm <filename>`或`git add -A`
 (可以使用`git checkout -- <filename>`取消误删除)
 3. 同步删除状态到repository`git commit -m "commition"`
 
@@ -91,7 +91,7 @@ dc2e8b56fda66800d010b6746959af858339d1dd a new file is create
 1. 查看分支。`git branch`
 2. 创建分支。`git branch <branchname>`
 3. 切换分支。`git checkout <branchname>`
-4. 创建+切换分支。`git checkou -b <branchname>`
+4. 创建+切换分支。`git checkout -b <branchname>`
 5. 合并某分支到当前分支。`git merge <branchname>`
 6. 删除分支。`git branch -d <branchname>`
 
